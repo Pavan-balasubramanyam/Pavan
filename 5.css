@@ -1,0 +1,69 @@
+body{
+  margin: 0px;
+}
+
+.name{
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  justify-content: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.img{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-top: 5px;
+}
+
+.resume{
+  position: fixed;
+  height: 20px ;
+  font-size: 20px;
+  padding: 5px;
+  padding-top: 4px;
+  left: 0px;
+  top: 0px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.details{
+  text-align: center;
+  font-size: small;
+}
+
+main{
+  margin: 0px 100px 0px 100px;
+  z-index: 1001px;
+}
+
+.sum,
+.edu,
+.s{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.mary,
+.schooling,
+.skills{
+  font-size: 17px;
+}
+
+.skills{
+  margin: 0px;
+}
+
+.schooling{
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+}
+
+footer{
+  margin: 0px 100px 0px 100px;
+  font-size: medium;
+}
+

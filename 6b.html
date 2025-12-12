@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<style>
+  .calc-box{
+    display: grid;
+    grid-template-columns: 500px;
+    text-align: center;
+  }
+  #num1,
+  #num2{
+    width: 200px;
+    margin-left: 150px;
+  }
+  button{
+    width: 100px;
+  }
+</style>
+<body>
+
+    <div class="calc-box">
+        <h2>Simple Calculator</h2>
+
+        <input type="number" id="num1" placeholder="Enter first number"><br>
+        <input type="number" id="num2" placeholder="Enter second number"><br>
+        <div class="calculator">
+        <button onclick="calculate('sum')">Sum</button><br>
+        <button onclick="calculate('difference')">Difference</button><br>
+        <button onclick="calculate('product')">Product</button><br>
+        <button onclick="calculate('quotient')">Quotient</button><br>
+        </div>  
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculate(operation) {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            let result = 0;
+
+            switch(operation) {
+                case 'sum':
+                    result = a + b;
+                    break;
+                case 'difference':
+                    result = a - b;
+                    break;
+                case 'product':
+                    result = a * b;
+                    break;
+                case 'quotient':
+                    if (b === 0) {
+                        document.getElementById("result").innerHTML = "Cannot divide by zero!";
+                        return;
+                    }
+                    result = a / b;
+                    break;
+            }
+
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marks Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+        .box {
+            width: 350px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        input{
+          width: 320px;
+        }
+        button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056c1;
+        }
+        #output {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h2>Student Marks Form</h2>
+
+        <form onsubmit="showMarks()">
+            <input type="text" id="name" placeholder="Enter Student Name" required>
+            <input type="number" id="marks" placeholder="Enter Marks" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function showMarks() {
+            event.preventDefault(); 
+
+            let studentName = document.getElementById("name").value;
+            let studentMarks = document.getElementById("marks").value;
+
+            document.getElementById("output").innerHTML =
+                "Student Name: " + studentName + "<br>" +
+                "Marks Obtained: " + studentMarks;
+        }
+    </script>
+
+</body>
+</html>
